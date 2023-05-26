@@ -1,15 +1,9 @@
-const express = require('express');
-const { ensureAuth, ensureGuest } = require('../middleware/auth');
-const router = express.Router();
-
-
-router.get('/',  (req, res, next) => {
-    res.render('index');
-});
-
-router.get('/dashboard', ensureAuth, (req, res, next) => {
-    res.render('dashboard');
-});
-
-
-module.exports = router;
+export { default as Header } from "./Header";
+export { default as MainContainer } from "./MainContainer";
+export { default as CreateContainer } from "./CreateContainer";
+export { default as HomeContainer } from "./HomeContainer";
+export { default as Loader } from "./Loader";
+export { default as RowContainer } from "./RowContainer";
+export { default as MenuContainer } from "./MenuContainer";
+export { default as CartContainer } from "./CartContainer";
+export { default as CartItem } from "./CartItem";
